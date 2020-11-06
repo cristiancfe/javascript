@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>
+		teste acentuação
+	</title>
+	<meta charset="utf-8"></meter>
+	
+<script >
+	var quebrada = false;
+	function MudaLampada(tipo){
+		if (!quebrada){
+
+		document.getElementById("luz").src="img/" + tipo + ".jpg";
+		if (tipo == 'lampadaquebrada'){
+			quebrada = true;
+			document.getElementById("Local").innerHTML ="<img src=\img/aviso.jpg\>"
+			}
+
+	}
+}
+
+</script>
+ 
+  <link href="estilo.css" rel="stylesheet" type="text/css">
+	
+</head>
+<body>
+ <h2> <span style="color: green;"> Acenda a Luz passando o mouse por cima do desenho  </h2>
+  <h1><span style="color: green;">Mas cuidado...</span></h1><span style="color: red;"><h1>NÃO CLIQUE</h1></span> <h1><span style="color: green;">na Lâmpada pois ela é frágil e pode quebrar...</span></h1>
+
+ <img src="img/lampadaapagada.jpg" id="luz" onmousemove="MudaLampada('lampadaacesa')"  onmouseout="MudaLampada('lampadaapagada')" onclick="MudaLampada('lampadaquebrada')"  />
+	
+	<p id="Local"> </p>
+
+
+</body>
+</html>
